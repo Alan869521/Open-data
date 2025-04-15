@@ -55,8 +55,8 @@
 <body>
 
   <div class="card">
-    <h1>My Data Story：台南市北區的高齡人口樣態視覺化</h1>
-    <h2>A11 至 A33 動畫式 Curve Chart 呈現北區高齡趨勢</h2>
+    <h1> My Data Story：台南市北區的高齡人口樣態視覺化</h1>
+    <h2>台南市北區老年人口佔比逐年上升，從 A11 至 A33 各里呈現出明顯的高齡化趨勢，反映人口結構老化所帶來的社會挑戰。</h2>
   </div>
 
   <iframe src="https://plotdb.io/v/chart/37119" allowfullscreen="true"></iframe>
