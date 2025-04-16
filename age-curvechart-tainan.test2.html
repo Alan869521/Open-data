@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jim Data Story - 台南市北區高齡人口樣態</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #fff9e5; /* 淡黃色背景 */
+      background-color: #fff9e5;
       font-family: 'Noto Sans TC', sans-serif;
       display: flex;
       flex-direction: column;
@@ -18,35 +18,54 @@
 
     .card {
       background-color: #fffaf0;
-      border: 1px solid #f5deb3; /* 淡黃色邊框 */
+      border: 1px solid #f5deb3;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 30px 40px;
       border-radius: 10px;
       margin: 30px auto;
       width: 80%;
       max-width: 900px;
-      text-align: center;
     }
 
     .card h1 {
-      margin: 0 0 10px;
+      margin-bottom: 20px;
       font-size: 1.8em;
       color: #333;
+      text-align: center;
     }
 
     .card h2 {
-      margin: 0;
-      font-size: 1.2em;
-      color: #666;
-      font-weight: normal;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+      color: #444;
+    }
+
+    .card p {
+      font-size: 1em;
+      line-height: 1.8;
+      color: #444;
+      margin: 15px 0;
+      text-align: left;
+    }
+
+    .chart-section {
+      margin-top: 40px;
+      width: 80%;
+      max-width: 900px;
+    }
+
+    .chart-section h2 {
+      text-align: center;
+      font-size: 1.3em;
+      color: #333;
+      margin-bottom: 20px;
     }
 
     iframe {
-      width: 80%;
-      max-width: 900px;
+      width: 100%;
       height: 600px;
       border: none;
-      margin-bottom: 40px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       border-radius: 10px;
     }
@@ -55,12 +74,25 @@
 <body>
 
   <div class="card">
-    <h1> My Data Story：台南市北區的高齡人口樣態視覺化</h1>
-    <h2>台南市北區老年人口佔比逐年上升，從 A11 至 A33 各里呈現出明顯的高齡化趨勢，反映人口結構老化所帶來的社會挑戰。</h2>
+    <h1>My Data Story：台南市北區的高齡人口樣態視覺化</h1>
+
+    <h2>區域概況分析</h2>
+    <p>台南市北區屬於市區範圍，具有高密度住宅區、醫療資源較集中、老舊社區比例高等特徵。根據內政部人口統計，截至近年，北區高齡人口比率已超過 20%，正式進入超高齡社會標準（UN 定義：65 歲以上佔總人口 20% 以上）。而因部分社區老化嚴重、年輕人口外移，使得高齡人口照顧問題具有明顯的「在地孤老」傾向。</p>
+
+    <p>此外，從衛福部與台南市政府長照地圖的分布來看，北區的長照資源密度雖高，但服務負荷亦大，未來如何透過跨單位整合、智慧照護科技導入，將成為解決此區高齡照護問題的關鍵。</p>
+
+    <h2>圖表解讀與高齡樣態分析</h2>
+    <p>根據圖表顯示，台南市北區高齡人口在年齡分層（A11、A12）項目中佔據了視覺圖表的最外層與第二層，顯示該區 65 歲以上人口比例相當高，並且進一步細分為 65–74 歲與 75 歲以上的分布，代表不僅僅是「人口老化」，而是「高齡化深化」的現象——也就是老年人口中，高齡老人的占比正在上升。</p>
+
+    <p>在身心障礙指標（A21、A22）上，尤其 A22 數值呈現明顯突出，代表著高齡與身心障礙的交集人口比例上升。這意味著北區的長者不只是年齡老化，還可能伴隨著認知障礙、行動不便等健康議題，這對於社區健康照護與無障礙環境規劃提出了更高挑戰。</p>
+
+    <p>同時，從長照指標（A31、A32、A33）的增強色塊可見，該區內的高齡者中，有顯著比例已進入長期照護系統，包括申請長照服務、接受機構照護等。這反映出台南北區作為一個人口密集的行政區，其在地照護資源需求正在快速上升，尤其是居家照顧與社區式日照服務成為未來資源配置的重點方向。</p>
   </div>
 
-  <iframe src="https://plotdb.io/v/chart/37119" allowfullscreen="true"></iframe>
+  <div class="chart-section">
+    <h2>高齡人口樣態視覺圖表</h2>
+    <iframe src="https://plotdb.io/v/chart/37119" allowfullscreen="true" frameborder="0"></iframe>
+  </div>
 
 </body>
 </html>
-
