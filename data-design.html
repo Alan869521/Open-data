@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jim design: kcg 113-12 population</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Noto Serif TC", serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      color: #2e2e2e;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .container {
+      width: 80%;
+      display: flex;
+      background-color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .text-section {
+      width: 40%;
+      background-color: #f2f1ed;
+      padding: 30px;
+      box-sizing: border-box;
+      color: #333;
+    }
+
+    .text-section h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #4a4a4a;
+    }
+
+    .text-section p {
+      font-size: 1em;
+      line-height: 1.8;
+    }
+
+    .chart-section {
+      width: 60%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>高雄市人口視覺化圖表</h1>
+  <div class="container">
+    <div class="text-section">
+      <h2>數據解讀</h2>
+      <p>
+        本圖表呈現某項統計結果，可用來觀察資料分布情況與趨勢。
+        透過視覺化分析，我們能夠更直觀地理解資料意涵，為決策提供有力依據。
+      </p>
+    </div>
+    <div class="chart-section">
+      <iframe src="https://plotdb.io/v/chart/37232" allowfullscreen="true"></iframe>
+    </div>
+  </div>
+</body>
+</html>
