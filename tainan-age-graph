@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tainan City Population Age Structure</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Noto Serif TC", serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      color: #2e2e2e;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .container {
+      width: 80%;
+      display: flex;
+      background-color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .text-section {
+      width: 40%;
+      background-color: #f2f1ed;
+      padding: 30px;
+      box-sizing: border-box;
+      color: #333;
+    }
+
+    .text-section h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #4a4a4a;
+    }
+
+    .text-section p {
+      font-size: 1em;
+      line-height: 1.8;
+    }
+
+    .chart-section {
+      width: 60%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>台南市各區人口年齡組成視覺化</h1>
+
+  <div class="container">
+    <div class="text-section">
+      <h2>數據觀察與分析</h2>
+      <p>
+        本圖表呈現<strong>台南市各行政區</strong>的人口年齡組成情形。從資料中可以觀察到，
+        例如<strong>永康區、東區</strong>等市中心地帶，20至39歲的青壯年人口比例明顯較高，顯示出都市就業與教育資源吸引力；
+        而在<strong>左鎮區、楠西區</strong>等偏遠地區，65至80歲的人口比例較高，反映出年輕人口外移、留在當地者以中高齡族群為主。
+      </p>
+      <p>
+        根據這些分布特性，市政府在規劃未來各區的公共建設時，可以針對人口結構差異進行資源分配，
+        例如在青壯年人口集中的區域加強育兒、教育、交通設施；而中高齡人口比例偏高的地區，則可以強化基礎醫療與日常生活便利設施，提升區域居民的生活品質。
+      </p>
+    </div>
+    <div class="chart-section">
+      <iframe src="https://plotdb.io/v/chart/37388" allowfullscreen="true"></iframe>
+    </div>
+  </div>
+
+</body>
+</html>
