@@ -3,62 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>台中市老年人口分析</title>
+  <title>台中市老年人口分析(各區各里)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Noto Serif TC', serif;
+      background: linear-gradient(to bottom right, #f1f4f9, #e2e6ea);
       margin: 0;
-      padding: 50px 20px;
-      font-family: "Noto Serif TC", serif;
-      background: linear-gradient(135deg, #f0f4f8, #e2e6ea);
+      padding: 0;
       color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
     h1 {
-      font-size: 2.4em;
+      text-align: center;
       color: #2c3e50;
+      font-size: 2.5em;
       margin-bottom: 40px;
-      border-bottom: 2px solid #aaa;
+      border-bottom: 2px solid #d0d5da;
       padding-bottom: 10px;
     }
 
-    .tab-buttons {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-
-    .tab-button {
-      padding: 12px 24px;
-      font-size: 1em;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background-color: #dfe6ed;
-      color: #2c3e50;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .tab-button:hover {
-      background-color: #b4c8da;
-    }
-
-    .tab-button.active {
-      background-color: #5c8ac0;
-      color: white;
-      font-weight: bold;
+    h2 {
+      font-size: 1.6em;
+      color: #3b4353;
+      margin-bottom: 16px;
     }
 
     .chart-container {
-      width: 100%;
-      max-width: 1000px;
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      margin-bottom: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .chart-container:hover {
+      transform: scale(1.01);
     }
 
     iframe {
@@ -66,45 +53,53 @@
       height: 600px;
       border: none;
       border-radius: 8px;
+      margin-bottom: 20px;
     }
 
-    .chart-content {
-      display: none;
+    .annotation p {
+      font-size: 1.05em;
+      line-height: 1.85;
+      color: #4d4d4d;
+      margin-bottom: 16px;
+      text-align: justify;
     }
 
-    .chart-content.active {
-      display: block;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+      }
+
+      .chart-container {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>台中市老年人口分析</h1>
 
-  <h1>台中市老年人口熱力圖分析</h1>
-
-  <div class="tab-buttons">
-    <button class="tab-button active" onclick="switchTab(0)">65–79歲人口熱力圖</button>
-    <button class="tab-button" onclick="switchTab(1)">80–100歲男性人口熱力圖</button>
-  </div>
-
-  <div class="chart-container">
-    <div class="chart-content active">
-      <iframe src="https://plotdb.io/v/chart/37499" allowfullscreen="true"></iframe>
+    <div class="chart-container">
+      <h2>台中各區各里65-79歲人口熱力圖</h2>
+      <iframe src="https://plotdb.io/v/chart/37499" allowfullscreen></iframe>
+      <div class="annotation">
+        <p>台中市65–79歲人口主要集中於北屯區、西屯區、南屯區、大里區與北區，這些區域具有高度都市化特徵...</p>
+        <!-- 其餘段落省略以節省空間，可原樣貼上 -->
+      </div>
     </div>
-    <div class="chart-content">
-      <iframe src="https://plotdb.io/v/chart/37501" allowfullscreen="true"></iframe>
+
+    <div class="chart-container">
+      <h2>台中各區各里80-100歲男性人口熱力圖</h2>
+      <iframe src="https://plotdb.io/v/chart/37501" allowfullscreen></iframe>
+      <div class="annotation">
+        <p>台中市80–100歲男性人口較多的地區，包括北屯區、南屯區、大里區與北區...</p>
+        <!-- 其餘段落省略以節省空間，可原樣貼上 -->
+      </div>
     </div>
   </div>
-
-  <script>
-    function switchTab(index) {
-      const buttons = document.querySelectorAll('.tab-button');
-      const charts = document.querySelectorAll('.chart-content');
-      buttons.forEach((btn, i) => {
-        btn.classList.toggle('active', i === index);
-        charts[i].classList.toggle('active', i === index);
-      });
-    }
-  </script>
-
 </body>
 </html>
