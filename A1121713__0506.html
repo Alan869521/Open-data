@@ -62,13 +62,14 @@
 
     .section img,
     .section iframe {
-      width: 50%; /* 增加寬度使得圖片更大 */
+      width: 50%; /* 拉伸圖表區域填滿框架 */
+      height: auto;
       border-radius: 10px;
-      margin-right: 20px;
     }
 
     .text {
-      width: 50%; /* 文字區域同樣增大 */
+      width: 50%; /* 同樣拉伸文字區域 */
+      margin-left: 20px;
     }
 
     .text p {
@@ -86,7 +87,8 @@
 
     .image-above-text img {
       width: 100%;
-      max-width: 1000px; /* 增加圖片寬度 */
+      height: auto; /* 保持圖片比例 */
+      max-width: 1000px; /* 最大寬度 */
       border-radius: 10px;
       margin-bottom: 15px;
     }
@@ -104,7 +106,7 @@
 
   <div id="age6579" class="section">
     <div class="image-above-text">
-      <iframe src="https://plotdb.io/v/chart/37499" height="450"></iframe>
+      <iframe src="https://plotdb.io/v/chart/37499" height="450" style="width:100%;"></iframe>
       <div class="text">
         <h2>台中各區各里65–79歲人口熱力圖</h2>
         <p>台中市65–79歲人口主要集中於北屯區、西屯區、南屯區、大里區與北區，這些區域具有高度都市化特徵。以北屯、西屯為例，近年重劃區發展迅速，吸引大量人口遷入，加上原有住宅區老化，自然累積許多在地居民逐步步入老年。南屯與大里則因靠近工業區與早期都市發展核心，長年居住者多，這也使得65–79歲人口比例偏高。</p>
@@ -117,7 +119,7 @@
 
   <div id="male80100" class="section">
     <div class="image-above-text">
-      <iframe src="https://plotdb.io/v/chart/37501" height="450"></iframe>
+      <iframe src="https://plotdb.io/v/chart/37501" height="450" style="width:100%;"></iframe>
       <div class="text">
         <h2>台中各區各里80–100歲男性人口熱力圖</h2>
         <p>台中市80–100歲男性人口較多的地區，包括北屯區、南屯區、大里區與北區。這些區域曾為軍公教與榮民移居主要據點，如北屯區的榮民社區與眷村文化，早期配有榮總門診或軍醫體系，對當時男性退役族群形成健康照護的長期保障。因此，這些區域較能累積長壽男性人口。男性高齡者在這些區域的存活率也因為生活穩定、醫療可及性高而有所提高。</p>
