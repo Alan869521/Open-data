@@ -3,43 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>台中市老年人口熱力圖</title>
+  <title>台中市65–79歲老年人口熱力圖</title>
   <style>
     body {
       margin: 0;
       padding: 40px 0;
       font-family: "Noto Serif TC", serif;
-      background-color: #f5f5f5;
+      background-color: #f9f7f4;
       color: #333;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    h1, h2 {
-      text-align: center;
-      color: #3e3e3e;
-      margin-bottom: 20px;
-    }
-
     h1 {
       font-size: 2.2em;
+      color: #2e2e2e;
+      margin-bottom: 30px;
       border-bottom: 2px solid #ccc;
       padding-bottom: 10px;
+      width: 90%;
+      max-width: 1100px;
+      text-align: center;
     }
 
-    h2 {
-      font-size: 1.6em;
-      margin-top: 40px;
-    }
-
-    .section {
+    .container {
       width: 90%;
       max-width: 1100px;
       background-color: #ffffff;
       border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
       padding: 30px;
+    }
+
+    .text-container {
+      line-height: 1.85;
+      font-size: 1.05em;
+      color: #444;
       margin-bottom: 40px;
     }
 
@@ -48,42 +49,36 @@
       height: 600px;
       border: none;
       border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      line-height: 1.8;
-      font-size: 1.05em;
-      color: #444;
-      text-align: justify;
     }
   </style>
 </head>
 <body>
-  <h1>台中市老年人口熱力圖專題</h1>
+  <h1>台中市65–79歲老年人口熱力圖</h1>
 
-  <!-- 第一張圖：65–79歲 -->
-  <section class="section">
-    <h2>台中市65–79歲老年人口熱力圖</h2>
+  <div class="container">
+    <div class="text-container">
+      <p>
+        本圖表展示的是<strong>台中市65至79歲人口於各區的熱力分布</strong>情形，幫助我們理解高齡人口在都市內的空間聚集趨勢。根據觀察，台中市作為中台灣的重要城市，兼具都市與鄉村特性，不同區域呈現出截然不同的高齡現象。
+      </p>
+
+      <p>
+        若進一步觀察台中市內部各區人口分布，可發現<strong>北屯區</strong>為65–79歲高齡人口數最多的行政區之一。此區過去曾為軍眷聚集地，居民多為早期移入的榮民與眷屬，加上後期重劃與建設完善，致使不少長者選擇原地安養，形成典型的「原地老化」社區。
+      </p>
+
+      <p>
+        相較之下，<strong>西屯區</strong>雖為台中科技、商業發展重心，但其住宅區比例高，亦吸引不少「子女帶父母同住」的家庭型態，導致區內中老年人口數穩定上升。這種跨世代共居的趨勢，反映出台中市都市區域的多元住宅選擇與社會連結型態。
+      </p>
+
+      <p>
+        <strong>東區</strong>則屬於較早期開發區域，老舊住宅比例高，居民年齡層偏大，呈現出「老年人口高密度」的特徵。然而，區內醫療資源相對集中，擁有如中國醫藥大學附設醫院等機構，使得此區在健康照護方面具有一定優勢，也吸引鄰近高齡者遷入。
+      </p>
+
+      <p>
+        另一方面，台中偏鄉地區如<strong>和平區</strong>，人口密度雖低，卻面臨另一種挑戰——「高齡化與人口外移」並存。年輕人口外出就學、就業，造成在地只剩下中高齡人口長期居住。此區雖自然資源豐富，但如何串聯社區、提升基礎醫療與交通支援，是高齡政策不可忽視的議題。
+      </p>
+    </div>
+
     <iframe src="https://plotdb.io/v/chart/37499" allowfullscreen="true"></iframe>
-    <p>
-      台中市65–79歲人口主要分布於人口密集區，如北屯、西屯、南屯與大里區。這些地區具備成熟的生活機能、完善醫療體系與豐富的社區資源，吸引許多民眾退休後繼續留居或遷入。此外，這年齡層的高齡者仍具行動力，常參與社區活動或老人大學，因此他們多集中在設施便利、交通便捷的區域。
-    </p>
-    <p>
-      另一方面，和平區、東勢區等偏遠區域則因地理限制與人口外流，高齡人口較為稀少。這些地區雖擁有自然環境優勢，但缺乏醫療、交通與照護支持，導致65–79歲人口分布較低。
-    </p>
-  </section>
-
-  <!-- 第二張圖：80–100歲男性 -->
-  <section class="section">
-    <h2>台中市80–100歲男性人口熱力圖</h2>
-    <iframe src="https://plotdb.io/v/chart/37501" allowfullscreen="true"></iframe>
-    <p>
-      台中市80–100歲男性人口呈現出歷史與社會因素交織下的分布模式。北屯、南屯與大里區等地由於過去是軍公教與榮民安置重鎮，長年來男性人口基數較高，隨時間推移，出現較多高齡男性。這些地區生活品質佳、醫療可及性高，是男性長壽的推力之一。
-    </p>
-    <p>
-      相對地，像是東勢、和平、外埔等地，因早期勞力工作型態較重、醫療資源相對不足，加上高齡男性多從事農業、工地等高風險勞動，壽命受限因素多。此外，原住民地區的生活與健康行為亦影響男性長者比例，導致這些地區出現80歲以上男性人口相對偏低的情況。
-    </p>
-  </section>
+  </div>
 </body>
 </html>
