@@ -2,138 +2,143 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <title>台中市老年人口分析</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>台中市老年人口分析(各區各里)</title>
   <style>
     body {
       font-family: "Noto Serif TC", serif;
-      line-height: 1.8;
-      margin: 40px auto;
-      max-width: 1000px;
-      background-color: #f8f9fa;
+      background-color: #f5f5f2;
       color: #333;
+      margin: 0;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     h1 {
-      color: #2c3e50;
       text-align: center;
+      color: #2c3e50;
+      font-size: 2.5em;
       margin-bottom: 50px;
-      font-size: 2.4em;
     }
 
-    h2 {
-      color: #34495e;
-      font-size: 1.6em;
-      margin-bottom: 20px;
-      border-left: 6px solid #3498db;
-      padding-left: 12px;
-    }
-
-    .chart-section {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #ffffff;
-      margin-bottom: 60px;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      border: 1px solid #ddd;
-    }
-
-    .chart-section:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .chart-text {
-      flex: 1 1 50%;
-      padding: 30px;
-    }
-
-    .chart-visual {
-      flex: 1 1 50%;
-      padding: 0;
-    }
-
-    iframe, img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .button-group {
+    .nav-buttons {
       text-align: center;
       margin-bottom: 40px;
     }
 
-    .button-group button {
+    .nav-buttons button {
+      font-size: 1em;
+      padding: 10px 20px;
+      margin: 0 10px;
       background-color: #3498db;
       color: white;
       border: none;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s ease;
     }
 
-    .button-group button:hover {
+    .nav-buttons button:hover {
       background-color: #2980b9;
     }
-  </style>
-  <script>
-    function scrollToSection(id) {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
+
+    .section {
+      background: #fff;
+      display: flex;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      margin-bottom: 60px;
     }
-  </script>
+
+    .section img,
+    .section iframe {
+      width: 50%;
+      height: auto;
+      border-right: 1px solid #eee;
+    }
+
+    .section-content {
+      padding: 30px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .section-content h2 {
+      color: #34495e;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .section-content p {
+      text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .anchor {
+      scroll-margin-top: 100px;
+    }
+  </style>
 </head>
 <body>
 
   <h1>台中市老年人口分析</h1>
 
-  <div class="button-group">
-    <button onclick="scrollToSection('age65')">65–79歲人口</button>
-    <button onclick="scrollToSection('male80')">80–100歲男性</button>
-    <button onclick="scrollToSection('idea')">集點子作品</button>
+  <div class="nav-buttons">
+    <button onclick="document.getElementById('map1').scrollIntoView({ behavior: 'smooth' });">65–79歲熱力圖</button>
+    <button onclick="document.getElementById('map2').scrollIntoView({ behavior: 'smooth' });">80–100歲男性圖</button>
+    <button onclick="document.getElementById('idea').scrollIntoView({ behavior: 'smooth' });">集點子作品</button>
   </div>
 
-  <div class="chart-section" id="age65">
-    <div class="chart-text">
-      <h2>台中各區各里65-79歲人口熱力圖</h2>
-      <p>台中市65–79歲人口主要集中於北屯區、西屯區、南屯區、大里區與北區，這些區域具有高度都市化特徵。以北屯、西屯為例，近年重劃區發展迅速，吸引大量人口遷入，加上原有住宅區老化，累積不少逐步步入老年的居民。</p>
-      <p>南屯與大里則因靠近工業區與早期都市發展核心，長年居住者多，也使得此年齡層人口比例偏高。這些地區擁有密集醫療資源（如中國附醫、大里仁愛醫院）、交通便利、日照中心與里辦公室等鄰里照護設施，使高齡者傾向選擇原地老化或回流定居。</p>
-      <p>反觀和平區、東勢區、新社區等偏山農業型區域，因人口基數小、青年外移、醫療資源不足與交通不便，導致此年齡層人口偏少，呈現「空洞化」現象。</p>
-    </div>
-    <div class="chart-visual">
-      <iframe src="https://plotdb.io/v/chart/37499" height="400px" allowfullscreen="true"></iframe>
-    </div>
-  </div>
-
-  <div class="chart-section" id="male80">
-    <div class="chart-text">
-      <h2>台中各區各里80-100歲男性人口熱力圖</h2>
-      <p>台中市80–100歲男性人口集中於北屯區、南屯區、大里區與北區。這些區域為早期榮民聚集地，配有軍醫體系與穩定生活環境，對男性長者健康提供保障。</p>
-      <p>多數高齡男性過去任職軍公教或穩定產業，生活規律、教育程度較高，退休後仍有社交與運動習慣，提升健康壽命。北屯與南屯的榮民社區，仍可見活躍銀髮族。</p>
-      <p>相對地，和平區、東勢區、大甲與外埔等傳統農業區，因男性長期從事勞力密集行業，醫療資源少，健康壽命短，加上退休後社交減少，導致高齡男性人口偏少。</p>
-    </div>
-    <div class="chart-visual">
-      <iframe src="https://plotdb.io/v/chart/37501" height="400px" allowfullscreen="true"></iframe>
+  <div class="section anchor" id="map1">
+    <iframe src="https://plotdb.io/v/chart/37499" allowfullscreen="true"></iframe>
+    <div class="section-content">
+      <h2>台中市65–79歲人口分布</h2>
+      <p>
+        台中市65–79歲人口主要集中於北屯、西屯、南屯、大里與北區，這些地區屬於高度都市化區域，發展成熟且交通與醫療資源豐富，吸引長者選擇在地老化。
+      </p>
+      <p>
+        北屯與西屯近年因重劃區帶動人口遷入，老年人口自然增加。南屯與大里因早期工業區與住宅發展密集，長期居住者比例高，也形成老年人口聚集。
+      </p>
+      <p>
+        相較之下，和平、東勢、新社、石岡與外埔等偏鄉地區，因人口外流、交通醫療資源不足，65–79歲人口基數偏低，形成「人口空洞化」現象。
+      </p>
     </div>
   </div>
 
-  <div class="chart-section" id="idea">
-    <div class="chart-visual">
-      <img src="https://i.imgur.com/JRoDlPM.jpeg" alt="集點子作品圖">
+  <div class="section anchor" id="map2">
+    <iframe src="https://plotdb.io/v/chart/37501" allowfullscreen="true"></iframe>
+    <div class="section-content">
+      <h2>台中市80–100歲男性人口分布</h2>
+      <p>
+        北屯、南屯、大里與北區仍是男性高齡者集中地，尤其過去的軍公教與榮民社區具長期醫療資源與穩定生活條件，是促成長壽的重要背景。
+      </p>
+      <p>
+        此類族群多具教育與穩定工作背景，生活規律，退休後仍維持社交活動與健康意識，進一步提升壽命與生活品質。
+      </p>
+      <p>
+        相對地，偏鄉地區如東勢、大甲與外埔等，因早年多從事勞力密集工作且醫療資源缺乏，使高齡男性人口較難累積。
+      </p>
     </div>
-    <div class="chart-text">
+  </div>
+
+  <div class="section anchor" id="idea">
+    <img src="https://i.imgur.com/JRoDlPM.jpeg" alt="集點子參賽作品">
+    <div class="section-content">
       <h2>集點子參賽作品</h2>
-      <p>我認為老年人在生命階段後期可秉持「不老」精神探索興趣，活到老學到老，但實際上，很多老年人選擇在家養老與照顧家人。</p>
-      <p>而我覺得「打桌球」對老年人有以下益處：1. 增進身體機能：透過四肢擺動，活絡筋骨；2. 促進社交：結交球友，交流情感；3. 自我實現：培養專長與自信，甚至參與比賽。</p>
-      <p>我的行動方案如下：1. 於里民中心增設桌球場地，促進健康；2. 政府與社區提供球拍與護膝；3. 設置醫療隊，保障運動安全。南市北區65–74歲老年人口9024人行動自如，非常適合推廣桌球達成「不老」精神。</p>
+      <p>
+        我認為老年人在生命後期應秉持「不老」精神，持續探索興趣與學習。然而，多數長者選擇在家養老與照顧家人，少有參與活動機會。
+      </p>
+      <p>
+        我主張推動「打桌球」運動，因其能促進身體活動、活絡筋骨、培養一技之長，同時帶來情感交流與社交互動，更能提升自信與成就感。
+      </p>
+      <p>
+        根據我家鄉台南市北區資料，65–74歲有14,847人，其中9,024人行動自如，適合參與桌球運動，推動里民中心提供場地、球拍與護具，並配有醫療支援，可望提升長者福祉與生命品質。
+      </p>
     </div>
   </div>
 
