@@ -1,139 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>台中市老年人口分析</title>
+  <meta charset="UTF-8">
+  <title>PlotDB 圖表嵌入</title>
   <style>
     body {
       margin: 0;
-      padding: 40px 0;
-      font-family: "Noto Serif TC", serif;
-      background-color: #f5f5f5;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 0;
     }
-
-    h1 {
-      font-size: 2.2em;
-      text-align: center;
-      color: #3e3e3e;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
-      margin-bottom: 40px;
-    }
-
-    .tab-container {
-      width: 90%;
-      max-width: 1100px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
-    }
-
-    .tabs {
-      display: flex;
-      justify-content: center;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .tab {
-      flex: 1;
-      text-align: center;
-      padding: 14px;
-      cursor: pointer;
-      font-weight: bold;
-      background-color: #f0f0f0;
-      transition: background-color 0.3s ease;
-    }
-
-    .tab:hover {
-      background-color: #e2e2e2;
-    }
-
-    .tab.active {
-      background-color: #fff;
-      border-bottom: 3px solid #5c8ac0;
-      color: #2e5a94;
-    }
-
-    .tab-content {
-      display: none;
-      padding: 30px;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
     iframe {
       width: 100%;
       height: 600px;
       border: none;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      line-height: 1.8;
-      font-size: 1.05em;
-      color: #444;
-      text-align: justify;
     }
   </style>
 </head>
 <body>
-  <h1>台中市老年人口熱力圖分析</h1>
-
-  <div class="tab-container">
-    <div class="tabs">
-      <div class="tab active" onclick="switchTab(0)">65–79歲熱力圖</div>
-      <div class="tab" onclick="switchTab(1)">80–100歲男性熱力圖</div>
-    </div>
-
-    <!-- 65–79歲熱力圖內容 -->
-    <div class="tab-content active">
-      <iframe src="https://plotdb.io/v/chart/37499" allowfullscreen="true"></iframe>
-      <p>
-        台中市65–79歲人口主要集中於北屯區、西屯區、南屯區、大里區與北區，這些區域具有高度都市化特徵。以北屯、西屯為例，近年重劃區發展迅速，吸引大量人口遷入，加上原有住宅區老化，自然累積許多在地居民逐步步入老年。南屯與大里則因靠近工業區與早期都市發展核心，長年居住者多，這也使得65–79歲人口比例偏高。
-      </p>
-      <p>
-        此外，這些地區擁有醫療院所密集（如中國醫藥大學附設醫院、中山醫院、大里仁愛醫院等）、交通便利（捷運、台中市公車網絡）以及鄰里照護資源（如里辦公室、日照中心），這讓許多高齡者選擇原地老化或回流定居於此。
-      </p>
-      <p>
-        相對來說，和平區、東勢區、新社區、石岡區與外埔區等偏山與農業型鄉鎮，人口整體老化速度雖快，但65–79歲年齡層的總人數仍偏低，原因在於：一方面是人口基數小，二方面為年輕世代外流、老年人口移居市區照顧需求增加，導致在地的此年齡層出現「空洞化」現象。這也與這些區域醫療設施稀少、公共交通不便、就業機會不足有直接關聯。
-      </p>
-    </div>
-
-    <!-- 80–100歲男性熱力圖內容（已替換為正確的 iframe） -->
-    <div class="tab-content">
-      <iframe src="https://plotdb.io/v/chart/37501" allowfullscreen="true"></iframe>
-      <p>
-        台中市80–100歲男性人口較多的地區，包括北屯區、南屯區、大里區與北區。這些區域曾為軍公教與榮民移居主要據點，如北屯區的榮民社區與眷村文化，早期配有榮總門診或軍醫體系，對當時男性退役族群形成健康照護的長期保障。因此，這些區域較能累積長壽男性人口。男性高齡者在這些區域的存活率也因為生活穩定、醫療可及性高而有所提高。
-      </p>
-      <p>
-        此外，這些地區的男性長者多在戰後接受過良好教育，或從事穩定職業（如教師、公務員、企業管理等），生活型態較規律，退休後仍保持一定社交活動與健康意識，這也進一步提升了他們的健康壽命。
-      </p>
-      <p>
-        相對地，在和平區、東勢區、大甲區、外埔區等偏鄉或傳統農業區，80歲以上男性較為稀少，這與早年地區經濟結構與勞力需求有密切關聯。該地區男性過往多從事農林漁牧或高體力密度工作，長期曝露於工作傷害與醫療不便情境下，健康存活率相對受限。
-      </p>
-      <p>
-        此外，原住民分布區如和平區，因生活壓力高、醫療衛教資源不易取得、慢性病照護難度大等原因，也常出現高齡男性人口偏低的情況。再者，男性比女性在高齡段原本就有較高死亡率，加上偏鄉男性退休後社交活動較少，也進一步導致存活年限縮短。
-      </p>
-    </div>
-  </div>
-
-  <script>
-    function switchTab(index) {
-      const tabs = document.querySelectorAll(".tab");
-      const contents = document.querySelectorAll(".tab-content");
-      tabs.forEach((tab, i) => {
-        tab.classList.toggle("active", i === index);
-        contents[i].classList.toggle("active", i === index);
-      });
-    }
-  </script>
+  <iframe 
+    src="https://plotdb.io/v/chart/37501" 
+    allowfullscreen="true">
+  </iframe>
 </body>
 </html>
