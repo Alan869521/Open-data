@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
@@ -14,71 +15,75 @@
       color: #333;
     }
 
-    h1 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 2.2em;
-    }
+```
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.2em;
+}
 
-    h2 {
-      color: #34495e;
-      font-size: 1.5em;
-      margin-bottom: 20px;
-    }
+h2 {
+  color: #34495e;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
 
-    .buttons {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+.buttons {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    .buttons button {
-      background-color: #2c3e50;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      margin: 5px;
-      font-size: 1em;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
+.buttons button {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
 
-    .buttons button:hover {
-      background-color: #1a242f;
-    }
+.buttons button:hover {
+  background-color: #1a242f;
+}
 
-    .section {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 20px;
-      margin-bottom: 60px;
-      border: 1px solid #ccc;
-    }
+.section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  margin-bottom: 60px;
+  border: 1px solid #ccc;
+}
 
-    .section img,
-    .section iframe {
-      width: 48%;
-      border-radius: 10px;
-    }
+.section img,
+.section iframe {
+  width: 48%;
+  border-radius: 10px;
+}
 
-    .section iframe {
-      margin-top: 2cm; /* 將圖片向下移動 2 公分 */
-    }
+/* 新增 margin-top 設定來向下移動圖片 */
+.section iframe {
+  margin-top: 2cm; /* 將圖片向下移動 2 公分 */
+}
 
-    .text {
-      width: 50%;
-      margin-left: 30px;
-    }
+.text {
+  width: 50%;
+  margin-left: 30px;
+}
 
-    .text p {
-      text-align: justify;
-      margin-bottom: 16px;
-    }
+.text p {
+  text-align: justify;
+  margin-bottom: 16px;
+}
+```
+
   </style>
 </head>
 <body>
@@ -86,16 +91,19 @@
   <h1>台中市老年人口分析</h1>
 
   <div class="buttons">
-    <button onclick="scrollToSection('age6579')">65–79歲人口</button>
-    <button onclick="scrollToSection('male80100')">80–100歲男性人口</button>
-    <button onclick="scrollToSection('idea')">集點子作品</button>
+    <button onclick="location.href='#age6579'">65–79歲人口</button>
+    <button onclick="location.href='#male80100'">80–100歲男性人口</button>
+    <button onclick="location.href='#idea'">集點子作品</button>
   </div>
 
   <div id="age6579" class="section">
     <iframe src="https://plotdb.io/v/chart/37499" height="450"></iframe>
     <div class="text">
       <h2>台中各區各里65–79歲人口熱力圖</h2>
-      <p>台中市65–79歲人口主要集中於北屯區、西屯區、南屯區、大里區與北區，這些區域具有高度都市化特徵...</p>
+      <p>台中市65–79歲人口主要集中於北屯區、西屯區、南屯區、大里區與北區，這些區域具有高度都市化特徵。以北屯、西屯為例，近年重劃區發展迅速，吸引大量人口遷入，加上原有住宅區老化，自然累積許多在地居民逐步步入老年。南屯與大里則因靠近工業區與早期都市發展核心，長年居住者多，這也使得65–79歲人口比例偏高。</p>
+      <p>此外，這些地區擁有醫療院所密集（如中國醫藥大學附設醫院、中山醫院、大里仁愛醫院等）、交通便利（捷運、台中市公車網絡）以及鄰里照護資源（如里辦公室、日照中心），這讓許多高齡者選擇原地老化或回流定居於此。</p>
+      <p>特別是在北屯與西屯，許多舊社區在都市更新過程中轉型為高密度住宅區，導致不同年齡層同時聚集，加速老年人口的比例攀升。這種現象也體現了台中市人口結構轉變與都市計畫發展之間的關聯性。</p>
+      <p>值得注意的是，大里區雖然屬於台中市東南側的衛星城市，但其高齡人口數量仍居高不下，這反映出其生活機能完整與在地居民高比例留鄉的特性。高齡者普遍傾向熟悉的生活環境，也因此形成了人口的穩定性與老化的集中現象。</p>
     </div>
   </div>
 
@@ -103,7 +111,10 @@
     <iframe src="https://plotdb.io/v/chart/37501" height="450"></iframe>
     <div class="text">
       <h2>台中各區各里80–100歲男性人口熱力圖</h2>
-      <p>台中市80–100歲男性人口較多的地區，包括北屯區、南屯區、大里區與北區...</p>
+      <p>台中市80–100歲男性人口較多的地區，包括北屯區、南屯區、大里區與北區。這些區域曾為軍公教與榮民移居主要據點，如北屯區的榮民社區與眷村文化，早期配有榮總門診或軍醫體系，對當時男性退役族群形成健康照護的長期保障。因此，這些區域較能累積長壽男性人口。男性高齡者在這些區域的存活率也因為生活穩定、醫療可及性高而有所提高。</p>
+      <p>此外，這些地區的男性長者多在戰後接受過良好教育，或從事穩定職業（如教師、公務員、企業管理等），生活型態較規律，退休後仍保持一定社交活動與健康意識，這也進一步提升了他們的健康壽命。</p>
+      <p>早期從軍職或公職退休的族群，往往擁有較好的退休金制度與生活支持系統，使得這些男性能維持良好的生活品質。此外，這些地區社區資源豐富，也利於延長高齡男性的生活自主性與社會參與度。</p>
+      <p>再者，這些區域過去多設有退伍軍人之家或相關福利設施，使得長壽男性族群能獲得更完整的醫療照護與社會支持，這也是他們能延續健康壽命的重要原因之一。</p>
     </div>
   </div>
 
@@ -111,18 +122,11 @@
     <img src="https://i.imgur.com/JRoDlPM.jpeg" alt="集點子作品">
     <div class="text">
       <h2>集點子參賽作品</h2>
-      <p>我認為老年人在生命階段後期可秉持「不老」精神探索興趣...</p>
+      <p>我認為老年人在生命階段後期可秉持「不老」精神探索興趣，活到老學到老，但實際上，很多老年人選擇在家養老與照顧家人。</p>
+      <p>而我覺得「打桌球」對老年人有以下益處，1.增進身體機能：透過四肢擺動，活絡筋骨。2.促進社交：結交球友，交流情感。3.自我實現：增加自信，培養一技之長，甚至參與比賽。另外，我觀察到家鄉南市北區老年人口較多，65-74歲有14847人，其中9024人行動自如，此類群適合參與桌球運動，也可達成「不老」目標。</p>
+      <p>我的行動方案為以下1.於里民中心增設桌球場地，提供運動空間，促進身心健康。2.政府或里民中心可提供球拍，方便長者練習並提供免費護膝，保護關節。3.場地設置醫療隊，確保運動安全。</p>
     </div>
   </div>
 
-  <script>
-    function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  </script>
-
 </body>
-</html>
+</html>     
