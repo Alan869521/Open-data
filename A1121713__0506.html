@@ -9,8 +9,8 @@
       font-family: "Noto Serif TC", serif;
       line-height: 1.8;
       margin: 40px auto;
-      max-width: 1100px;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      max-width: 1000px;
+      background-color: #f8f9fa;
       color: #333;
     }
 
@@ -25,66 +25,69 @@
       color: #34495e;
       font-size: 1.6em;
       margin-bottom: 20px;
+      border-left: 6px solid #3498db;
+      padding-left: 12px;
     }
 
-    .button-bar {
+    .chart-section {
       display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
-      gap: 20px;
+      flex-wrap: wrap;
+      background-color: #ffffff;
+      margin-bottom: 60px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border: 1px solid #ddd;
     }
 
-    .button-bar button {
-      padding: 10px 20px;
+    .chart-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .chart-text {
+      flex: 1 1 50%;
+      padding: 30px;
+    }
+
+    .chart-visual {
+      flex: 1 1 50%;
+      padding: 0;
+    }
+
+    iframe, img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .button-group button {
       background-color: #3498db;
       color: white;
       border: none;
-      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 8px;
       cursor: pointer;
       font-size: 1em;
+      transition: background-color 0.3s;
     }
 
-    .button-bar button:hover {
+    .button-group button:hover {
       background-color: #2980b9;
-    }
-
-    .section {
-      background-color: #ffffff;
-      padding: 25px;
-      margin-bottom: 60px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border: 1px solid #ccc;
-    }
-
-    .section-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .section-flex img,
-    iframe {
-      flex: 1 1 45%;
-      border-radius: 10px;
-      border: 1px solid #aaa;
-    }
-
-    .annotation {
-      flex: 1 1 45%;
-      font-size: 1em;
-      color: #555;
-      text-align: justify;
-    }
-
-    .final-section h2 {
-      margin-bottom: 30px;
     }
   </style>
   <script>
     function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   </script>
 </head>
@@ -92,37 +95,45 @@
 
   <h1>台中市老年人口分析</h1>
 
-  <div class="button-bar">
-    <button onclick="scrollToSection('age6579')">65–79歲人口圖</button>
-    <button onclick="scrollToSection('age80100')">80–100歲男性圖</button>
+  <div class="button-group">
+    <button onclick="scrollToSection('age65')">65–79歲人口</button>
+    <button onclick="scrollToSection('male80')">80–100歲男性</button>
     <button onclick="scrollToSection('idea')">集點子作品</button>
   </div>
 
-  <div class="section section-flex" id="age6579">
-    <iframe src="https://plotdb.io/v/chart/37499" width="100%" height="500px"></iframe>
-    <div class="annotation">
-      <h2>65–79歲人口熱力圖解析</h2>
-      <p>台中市65–79歲人口集中於北屯、西屯、南屯、大里與北區，這些區域都市化程度高，重劃與住宅老化效應推升高齡人口。鄰近醫療、交通便利、照護資源豐富，是長者首選定居區。</p>
-      <p>相較之下，和平、東勢、新社等偏鄉，因人口少與資源缺乏，65–79歲族群明顯偏低。</p>
+  <div class="chart-section" id="age65">
+    <div class="chart-text">
+      <h2>台中各區各里65-79歲人口熱力圖</h2>
+      <p>台中市65–79歲人口主要集中於北屯區、西屯區、南屯區、大里區與北區，這些區域具有高度都市化特徵。以北屯、西屯為例，近年重劃區發展迅速，吸引大量人口遷入，加上原有住宅區老化，累積不少逐步步入老年的居民。</p>
+      <p>南屯與大里則因靠近工業區與早期都市發展核心，長年居住者多，也使得此年齡層人口比例偏高。這些地區擁有密集醫療資源（如中國附醫、大里仁愛醫院）、交通便利、日照中心與里辦公室等鄰里照護設施，使高齡者傾向選擇原地老化或回流定居。</p>
+      <p>反觀和平區、東勢區、新社區等偏山農業型區域，因人口基數小、青年外移、醫療資源不足與交通不便，導致此年齡層人口偏少，呈現「空洞化」現象。</p>
+    </div>
+    <div class="chart-visual">
+      <iframe src="https://plotdb.io/v/chart/37499" height="400px" allowfullscreen="true"></iframe>
     </div>
   </div>
 
-  <div class="section section-flex" id="age80100">
-    <iframe src="https://plotdb.io/v/chart/37501" width="100%" height="500px"></iframe>
-    <div class="annotation">
-      <h2>80–100歲男性人口熱力圖解析</h2>
-      <p>北屯、南屯、大里與北區具軍公教與榮民背景，醫療穩定、生活規律，促進男性長壽。健康保障與教育背景也是提升存活率的主因。</p>
-      <p>反觀和平、東勢、大甲等偏鄉，男性高齡人口稀少，與高體力工作與醫療不便息息相關。</p>
+  <div class="chart-section" id="male80">
+    <div class="chart-text">
+      <h2>台中各區各里80-100歲男性人口熱力圖</h2>
+      <p>台中市80–100歲男性人口集中於北屯區、南屯區、大里區與北區。這些區域為早期榮民聚集地，配有軍醫體系與穩定生活環境，對男性長者健康提供保障。</p>
+      <p>多數高齡男性過去任職軍公教或穩定產業，生活規律、教育程度較高，退休後仍有社交與運動習慣，提升健康壽命。北屯與南屯的榮民社區，仍可見活躍銀髮族。</p>
+      <p>相對地，和平區、東勢區、大甲與外埔等傳統農業區，因男性長期從事勞力密集行業，醫療資源少，健康壽命短，加上退休後社交減少，導致高齡男性人口偏少。</p>
+    </div>
+    <div class="chart-visual">
+      <iframe src="https://plotdb.io/v/chart/37501" height="400px" allowfullscreen="true"></iframe>
     </div>
   </div>
 
-  <div class="section section-flex final-section" id="idea">
-    <img src="https://i.imgur.com/JRoDlPM.jpeg" alt="集點子參賽作品" width="100%">
-    <div class="annotation">
+  <div class="chart-section" id="idea">
+    <div class="chart-visual">
+      <img src="https://i.imgur.com/JRoDlPM.jpeg" alt="集點子作品圖">
+    </div>
+    <div class="chart-text">
       <h2>集點子參賽作品</h2>
-      <p>我認為老年人應秉持「不老」精神探索興趣，活到老學到老，但現實中多選擇在家照顧家人。</p>
-      <p>打桌球對老年人有三大益處：1. 活絡筋骨、增進機能；2. 促進社交、結交球友；3. 培養自信與技能，甚至參賽實現自我。以台南市北區為例，65–74歲行動自如者達9,024人，是推動桌球的不錯目標群。</p>
-      <p>方案包括：1. 增設桌球場地；2. 提供球拍與護膝；3. 設醫療隊確保安全。</p>
+      <p>我認為老年人在生命階段後期可秉持「不老」精神探索興趣，活到老學到老，但實際上，很多老年人選擇在家養老與照顧家人。</p>
+      <p>而我覺得「打桌球」對老年人有以下益處：1. 增進身體機能：透過四肢擺動，活絡筋骨；2. 促進社交：結交球友，交流情感；3. 自我實現：培養專長與自信，甚至參與比賽。</p>
+      <p>我的行動方案如下：1. 於里民中心增設桌球場地，促進健康；2. 政府與社區提供球拍與護膝；3. 設置醫療隊，保障運動安全。南市北區65–74歲老年人口9024人行動自如，非常適合推廣桌球達成「不老」精神。</p>
     </div>
   </div>
 
