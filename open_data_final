@@ -3,72 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Power BI 個人專案｜陳冠智</title>
+  <title>Power BI 專案展示 - 陳冠智</title>
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f9fc;
+      background: #f2f4f8;
       color: #333;
     }
+
     header {
-      background-color: #2c3e50;
+      background-color: #0b6fa4;
       color: white;
-      padding: 30px 10px;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    h1 {
+
+    header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 28px;
     }
-    h2 {
-      color: #2980b9;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .report-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-      flex-direction: column;
-    }
-    iframe {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      width: 90%;
+
+    section {
       max-width: 1000px;
-      height: 600px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin: 40px auto;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 30px;
     }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+    }
+
     footer {
       text-align: center;
-      font-size: 0.9em;
-      color: #888;
-      padding: 30px 10px;
+      padding: 20px;
+      background: #e3e3e3;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      iframe {
+        height: 400px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>陳冠智｜Power BI 數據視覺化專案</h1>
-    <p>資料來源：政府開放資料平台 - 每日雨量測站</p>
-  </header>
+<header>
+  <h1>行政區每日雨量視覺化報告</h1>
+</header>
 
-  <div class="report-container">
-    <h2>📊 各縣市／測站／月份 雨量分布分析</h2>
-    <iframe title="A1121713_陳冠智_Power BI個人專案"
-            src="https://app.powerbi.com/view?r=eyJrIjoiNGFlMjVkZDMtZTliOS00NmUyLTlmNGItMzQ0YzgxNGZiYjM4IiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
-            frameborder="0" allowFullScreen="true">
-    </iframe>
-  </div>
+<section>
+  <p>以下為我透過 Power BI 製作的互動圖表，資料來源為政府開放資料（地面測站每日雨量）。使用者可點選不同縣市與月份，自由篩選，查看雨量分布情況。</p>
 
-  <footer>
-    © 2025 陳冠智 | 資料視覺化課程專案
-  </footer>
+  <iframe title="A1121713_陳冠智_Power BI個人專案"
+    src="https://app.powerbi.com/view?r=eyJrIjoiNGFlMjVkZDMtZTliOS00NmUyLTlmNGItMzQ0YzgxNGZiYjM4IiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
+    allowFullScreen="true">
+  </iframe>
+</section>
+
+<footer>
+  © 2025 陳冠智．資料視覺化專案展示
+</footer>
 
 </body>
 </html>
